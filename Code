@@ -1,0 +1,20 @@
+import random
+
+# Dictionary of moods and corresponding songs
+mood_songs = {
+    "happy": ["Happy - Pharrell Williams", "Can't Stop the Feeling - Justin Timberlake", "Uptown Funk - Bruno Mars"],
+    "sad": ["Someone Like You - Adele", "Fix You - Coldplay", "Say Something - A Great Big World"],
+    "relaxed": ["Weightless - Marconi Union", "Sunflower - Post Malone", "Perfect - Ed Sheeran"],
+    "energetic": ["Stronger - Kanye West", "Eye of the Tiger - Survivor", "Don't Stop Me Now - Queen"],
+    "romantic": ["Thinking Out Loud - Ed Sheeran", "All of Me - John Legend", "Perfect - Ed Sheeran"]
+}
+
+# Ask user for their mood
+print("Welcome to the Mood-Based Music Recommender! 🎶")
+mood = input("How are you feeling today? (happy, sad, relaxed, energetic, romantic): ").lower()
+
+# Recommend a song
+if mood in mood_songs:
+    print(f"🎵 Based on your mood, you might enjoy: {random.choice(mood_songs[mood])}")
+else:
+    print("Sorry, I don't have recommendations for that mood. Try choosing from happy, sad, relaxed, energetic, or romantic.")
